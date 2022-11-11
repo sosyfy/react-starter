@@ -5,7 +5,7 @@ class AuthService {
     }
 
     getCurrentUserType() {
-        return atob(localStorage.getItem("Type"));
+        return localStorage.getItem("Type");
     }
 
     getUserLoggedInAt() {
@@ -16,7 +16,7 @@ class AuthService {
         return localStorage.getItem("token");
     }
     getAppKey() {
-        return localStorage.getItem("App-Key")
+        return localStorage.getItem("appKey")
     }
     
     getClientId() {

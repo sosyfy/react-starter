@@ -3,7 +3,7 @@ import authService from './auth.service';
 
 var headers;
 
-if (authService.getCurrentUserAccessToken()) {
+if ( authService.getCurrentUserAccessToken() ) {
   headers = {
     'Authorization': 'Bearer ' + authService.getCurrentUserAccessToken(),
     'Content-Type': 'application/json',
