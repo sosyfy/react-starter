@@ -37,3 +37,11 @@ export const useUserStore = create(
       }
     )
   )
+
+
+  export const useNav = create((set) => ({
+    open: true,
+    setOpen: (data) => set((state) => ({ open: data })),
+  }))
+
+
