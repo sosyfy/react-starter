@@ -23,13 +23,13 @@ const SideBar = () => {
     <aside className="h-screen min-h-screen fixed">
       <div
         className={`bg-[#0e0e0e] min-h-screen ${
-          open ? "w-60" : "w-32"
+          open ? "w-60 z-10" : "w-0 -translate-x-60 md:-translate-x-0 md:w-32"
         } duration-500 text-gray-100 px-4`}
       >
         <div className="py-3 flex justify-end">
           <AiOutlineHeart
             size={26}
-            className="cursor-pointer"
+            className="cursor-pointer hidden md:flex"
             onClick={() => setOpen(!open)}
           />
         </div>
