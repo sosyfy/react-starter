@@ -14,7 +14,7 @@ function App() {
        {/* <Samples /> */}
        <main className='w-Screen flex'>
           <SideBar />
-          <section   className={`${ open ? "ml-72" : "ml-16" } duration-500`}>
+          <section   className={`${ open ? "ml-72" : "ml-32" } duration-500`}>
              content: 
           </section> 
        </main>

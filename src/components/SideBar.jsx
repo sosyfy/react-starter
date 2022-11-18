@@ -23,7 +23,7 @@ const SideBar = () => {
     <aside className="h-screen min-h-screen fixed">
       <div
         className={`bg-[#0e0e0e] min-h-screen ${
-          open ? "w-72" : "w-16"
+          open ? "w-60" : "w-32"
         } duration-500 text-gray-100 px-4`}
       >
         <div className="py-3 flex justify-end">
@@ -35,7 +35,7 @@ const SideBar = () => {
         </div>
         <div className="mt-4 flex flex-col gap-4 relative">
           {menus?.map((menu, i) => {
-            let size = open ? "20" : "20"
+            let size = open ? "28" : "40"
             return (
             <Link
               to={menu?.link}
@@ -44,7 +44,7 @@ const SideBar = () => {
                 menu?.margin && "mt-5"
               } group flex items-center text-sm  gap-3.5 font-medium p-2 hover:bg-gray-800 rounded-md`}
             >
-              <div>{React.createElement(menu?.icon, { size: size })}</div>
+              <div className="ml-4">{React.createElement(menu?.icon, { size: size })}</div>
               <h2
                 style={{
                   transitionDelay: `${i + 3}00ms`,
@@ -58,7 +58,7 @@ const SideBar = () => {
               <h2
                 className={`${
                   open && "hidden"
-                } absolute left-48 bg-white font-semibold whitespace-pre text-gray-900 rounded-md drop-shadow-lg px-0 py-0 w-0 overflow-hidden group-hover:px-2 group-hover:py-1 group-hover:left-14 group-hover:duration-300 group-hover:w-fit `}
+                } absolute left-48 bg-white font-semibold whitespace-pre text-gray-900 rounded-md drop-shadow-lg px-0 py-0 w-0 overflow-hidden group-hover:px-2 group-hover:py-1 group-hover:left-28 group-hover:duration-300 group-hover:w-fit `}
               >
                 {menu?.name}
               </h2>
